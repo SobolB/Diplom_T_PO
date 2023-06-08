@@ -1,0 +1,306 @@
+[1686226367.744][INFO]: Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 40781
+[1686226367.744][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1686226367.813][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\sobol\\IdeaProjects\\untitled1\\build\\downloads\\1686226367689_9272_22",
+               "plugins.always_open_pdf_externally": true,
+               "profile.default_content_setting_values.automatic_downloads": 1
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\sobol\\IdeaProjects\\untitled1\\build\\downloads\\1686226367689_9272_22",
+            "plugins.always_open_pdf_externally": true,
+            "profile.default_content_setting_values.automatic_downloads": 1
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1686226367.817][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\sobol\\IdeaProjects\\untitled1\\build\\downloads\\1686226367689_9272_22"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "automatic_downloads": 1,
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1686226367.818][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1686226367.821][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\sobol\AppData\Local\Temp\scoped_dir2720_2101411976" data:,
+[1686226368.412][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1686226368.419][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "114.0.5735.110",
+      "chrome": {
+         "chromedriverVersion": "114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052})",
+         "userDataDir": "C:\\Users\\sobol\\AppData\\Local\\Temp\\scoped_dir2720_2101411976"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:53882"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "6435bf4b618d9b022a086145f5489ea3"
+}
+[1686226368.435][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1686226368.435][INFO]: Waiting for pending navigations...
+[1686226368.438][INFO]: Done waiting for pending navigations. Status: ok
+[1686226368.563][INFO]: Waiting for pending navigations...
+[1686226368.563][INFO]: Done waiting for pending navigations. Status: ok
+[1686226368.563][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE SetWindowRect {
+   "height": 768,
+   "width": 1366,
+   "x": 10,
+   "y": 10
+}
+[1686226368.579][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1686226368.579][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE SetTimeouts
+[1686226368.595][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Navigate {
+   "url": "http://localhost:8080"
+}
+[1686226368.595][INFO]: Waiting for pending navigations...
+[1686226368.595][INFO]: Done waiting for pending navigations. Status: ok
+[1686226370.971][INFO]: Waiting for pending navigations...
+[1686226371.026][INFO]: Done waiting for pending navigations. Status: ok
+[1686226371.189][INFO]: Waiting for pending navigations...
+[1686226371.199][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.381][INFO]: Waiting for pending navigations...
+[1686226373.390][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.390][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Navigate ERROR unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=114.0.5735.110)
+[1686226373.392][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Screenshot {
+}
+[1686226373.392][INFO]: Waiting for pending navigations...
+[1686226373.392][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.482][INFO]: Waiting for pending navigations...
+[1686226373.483][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.483][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABUYAAAKoCAYAAAC7qCUdAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X9wledhJ/pvM2pGjUVWuMIVGBJxSrDBWVlLqOkCDevoBk9wsgkxTRu6bhwYmgl30p3Uy94d/oCBO5fZu1lv5+5Ondt6zDrXd53cFIdkkpAJXSWrFrvFS1isj..."
+[1686226373.495][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1686226373.495][INFO]: Waiting for pending navigations...
+[1686226373.496][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.516][INFO]: Waiting for pending navigations...
+[1686226373.516][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.516][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE ExecuteScript "\u003Chtml dir=\"ltr\" lang=\"ru\">\u003Chead>\n  \u003Cmeta charset=\"utf-8\">\n  \u003Cmeta name=\"color-scheme\" content=\"light dark\">\n  \u003Cmeta name=\"theme-color\" content=\"#fff\">\n  \u003Cmeta name=\"viewport\" content=\"width=device-..."
+[1686226373.595][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND GetTitle {
+}
+[1686226373.595][INFO]: Waiting for pending navigations...
+[1686226373.596][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.599][INFO]: Waiting for pending navigations...
+[1686226373.599][INFO]: Done waiting for pending navigations. Status: ok
+[1686226373.599][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE GetTitle "localhost"
+[1686226373.607][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Navigate {
+   "url": "http://localhost:8080"
+}
+[1686226373.607][INFO]: Waiting for pending navigations...
+[1686226373.608][INFO]: Done waiting for pending navigations. Status: ok
+[1686226375.974][INFO]: Waiting for pending navigations...
+[1686226375.975][INFO]: Done waiting for pending navigations. Status: ok
+[1686226376.219][INFO]: Waiting for pending navigations...
+[1686226376.228][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.319][INFO]: Waiting for pending navigations...
+[1686226378.327][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.327][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Navigate ERROR unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=114.0.5735.110)
+[1686226378.329][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Screenshot {
+}
+[1686226378.329][INFO]: Waiting for pending navigations...
+[1686226378.329][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.415][INFO]: Waiting for pending navigations...
+[1686226378.423][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.423][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABUYAAAKoCAYAAAC7qCUdAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X9wledhJ/pvM2pGjUVWuMIVGBJxSrDBWVlLqOkCDevoBk9wsgkxTRu6bhwYmgl30p3Uy94d/oCBO5fZu1lv5+5Ondt6zDrXd53cFIdkkpAJXSWrFrvFS1isj..."
+[1686226378.438][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1686226378.438][INFO]: Waiting for pending navigations...
+[1686226378.440][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.461][INFO]: Waiting for pending navigations...
+[1686226378.462][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.462][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE ExecuteScript "\u003Chtml dir=\"ltr\" lang=\"ru\">\u003Chead>\n  \u003Cmeta charset=\"utf-8\">\n  \u003Cmeta name=\"color-scheme\" content=\"light dark\">\n  \u003Cmeta name=\"theme-color\" content=\"#fff\">\n  \u003Cmeta name=\"viewport\" content=\"width=device-..."
+[1686226378.495][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND GetTitle {
+}
+[1686226378.495][INFO]: Waiting for pending navigations...
+[1686226378.496][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.501][INFO]: Waiting for pending navigations...
+[1686226378.503][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.503][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE GetTitle "localhost"
+[1686226378.517][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Navigate {
+   "url": "http://localhost:8080"
+}
+[1686226378.517][INFO]: Waiting for pending navigations...
+[1686226378.518][INFO]: Done waiting for pending navigations. Status: ok
+[1686226378.577][INFO]: Waiting for pending navigations...
+[1686226378.583][INFO]: Done waiting for pending navigations. Status: ok
+[1686226380.857][INFO]: Waiting for pending navigations...
+[1686226380.865][INFO]: Done waiting for pending navigations. Status: ok
+[1686226380.937][INFO]: Waiting for pending navigations...
+[1686226380.947][INFO]: Done waiting for pending navigations. Status: ok
+[1686226380.947][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Navigate ERROR unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=114.0.5735.110)
+[1686226380.952][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Screenshot {
+}
+[1686226380.952][INFO]: Waiting for pending navigations...
+[1686226380.952][INFO]: Done waiting for pending navigations. Status: ok
+[1686226381.046][INFO]: Waiting for pending navigations...
+[1686226381.046][INFO]: Done waiting for pending navigations. Status: ok
+[1686226381.046][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAAA60AAAKoCAYAAACcHxnYAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X9wFPed5/9Xclp/FUfSd0QkMoBkS7MyP2Q8aImCciBHdiaWL7JjR0Yha621ZlEpVyHFXsWEvSttlShUFb57X0JSu66Q+oaCKGGX3HoxxDhWzjhjW7HMRYrCi..."
+[1686226381.071][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1686226381.071][INFO]: Waiting for pending navigations...
+[1686226381.071][INFO]: Done waiting for pending navigations. Status: ok
+[1686226381.088][INFO]: Waiting for pending navigations...
+[1686226381.089][INFO]: Done waiting for pending navigations. Status: ok
+[1686226381.089][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE ExecuteScript "\u003Chtml dir=\"ltr\" lang=\"ru\">\u003Chead>\n  \u003Cmeta charset=\"utf-8\">\n  \u003Cmeta name=\"color-scheme\" content=\"light dark\">\n  \u003Cmeta name=\"theme-color\" content=\"#fff\">\n  \u003Cmeta name=\"viewport\" content=\"width=device-..."
+[1686226381.114][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND GetTitle {
+}
+[1686226381.114][INFO]: Waiting for pending navigations...
+[1686226381.114][INFO]: Done waiting for pending navigations. Status: ok
+[1686226381.117][INFO]: Waiting for pending navigations...
+[1686226381.117][INFO]: Done waiting for pending navigations. Status: ok
+[1686226381.117][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE GetTitle "localhost"
+[1686226381.135][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Navigate {
+   "url": "http://localhost:8080"
+}
+[1686226381.135][INFO]: Waiting for pending navigations...
+[1686226381.136][INFO]: Done waiting for pending navigations. Status: ok
+[1686226383.218][INFO]: Waiting for pending navigations...
+[1686226383.227][INFO]: Done waiting for pending navigations. Status: ok
+[1686226383.490][INFO]: Waiting for pending navigations...
+[1686226383.498][INFO]: Done waiting for pending navigations. Status: ok
+[1686226385.592][INFO]: Waiting for pending navigations...
+[1686226385.600][INFO]: Done waiting for pending navigations. Status: ok
+[1686226385.600][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Navigate ERROR unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=114.0.5735.110)
+[1686226385.601][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Screenshot {
+}
+[1686226385.601][INFO]: Waiting for pending navigations...
+[1686226385.602][INFO]: Done waiting for pending navigations. Status: ok
+[1686226385.686][INFO]: Waiting for pending navigations...
+[1686226385.686][INFO]: Done waiting for pending navigations. Status: ok
+[1686226385.686][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAAA60AAAKoCAYAAACcHxnYAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X9wFPed5/9Xclp/FUfSd0QkMoBkS7MyP2Q8aImCciBHdiaWL7JjR0Yha621ZlEpVyHFXsWEvSttlShUFb57X0JSu66Q+oaCKGGX3HoxxDhWzjhjW7HMRYrCi..."
+[1686226385.709][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1686226385.709][INFO]: Waiting for pending navigations...
+[1686226385.709][INFO]: Done waiting for pending navigations. Status: ok
+[1686226385.730][INFO]: Waiting for pending navigations...
+[1686226385.730][INFO]: Done waiting for pending navigations. Status: ok
+[1686226385.730][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE ExecuteScript "\u003Chtml dir=\"ltr\" lang=\"ru\">\u003Chead>\n  \u003Cmeta charset=\"utf-8\">\n  \u003Cmeta name=\"color-scheme\" content=\"light dark\">\n  \u003Cmeta name=\"theme-color\" content=\"#fff\">\n  \u003Cmeta name=\"viewport\" content=\"width=device-..."
+[1686226385.771][INFO]: [6435bf4b618d9b022a086145f5489ea3] COMMAND Quit {
+}
+[1686226385.808][INFO]: [6435bf4b618d9b022a086145f5489ea3] RESPONSE Quit
