@@ -13,6 +13,11 @@
   
 ### Общие рекомендации
 #### Найденные баги
+* [Ввод в поле "Владелец" специальные символы](https://github.com/SobolB/Diplom_T_PO/issues/1#issue-1799597746)
+* [Ввод в поле "Владелец" имя с цифрой](https://github.com/SobolB/Diplom_T_PO/issues/2#issue-1799678722)
+* [Ввод в поле "Владелец" имя и фамилию кириллицей(RU)](https://github.com/SobolB/Diplom_T_PO/issues/3#issue-1799688553)
+* [Ввод в поле "Владелец" только имя](https://github.com/SobolB/Diplom_T_PO/issues/4#issue-1799692392)
+* [Ввод в поле "Месяц" - значение "00"](https://github.com/SobolB/Diplom_T_PO/issues/5#issue-1799710955)
 
 #### Рекомендации
 * Необходимо исправить все найденные баги
