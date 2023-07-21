@@ -5,15 +5,16 @@ import com.github.javafaker.Faker;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.lang.Math;
 
 public class DataHelper {
 
     public static Card getApprovedCard() {
-        return new Card("4444444444444441", "12", "22", "Dmitry Evdokimov", "123");
+        return new Card("4444444444444441", "12", "23", "Dmitry Evdokimov", "123");
     }
 
     public static Card getDeclinedCard() {
-        return new Card("4444444444444442", "12", "22", "Dmitry Evdokimov", "123");
+        return new Card("4444444444444442", "12", "23", "Dmitry Evdokimov", "123");
     }
 
     public static Card getEmptyCard() {
@@ -25,15 +26,19 @@ public class DataHelper {
         return LocalDate.now().plusMonths(shift).format(DateTimeFormatter.ofPattern("MM"));
     }
 
-    public static String getShiftedYear(int yearCount){
+    public static String getFutureYear(int yearCount){
         return LocalDate.now().plusYears(yearCount).format(DateTimeFormatter.ofPattern("YY"));
+    }
+
+    public static String getPastYear(int yearCount){
+        return LocalDate.now().minusYears(yearCount).format(DateTimeFormatter.ofPattern("YY"));
     }
 
     public static Card getNumberCard15Symbols() {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         String number = faker.number().digits(15);
         return new Card(number, month, year, holder, cvv);
@@ -43,7 +48,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         return new Card("1444444444444444", month, year, holder, cvv);
     }
@@ -52,7 +57,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = faker.number().digit();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -60,7 +65,7 @@ public class DataHelper {
     public static Card getCardMonthOver12() {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", "13", year, holder, cvv);
     }
@@ -68,7 +73,7 @@ public class DataHelper {
     public static Card getCardMonth00ThisYear() {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
-        String year = getShiftedYear(0);
+        String year = getFutureYear(0);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", "00", year, holder, cvv);
     }
@@ -76,7 +81,7 @@ public class DataHelper {
     public static Card getCardMonth00OverThisYear() {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(0);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", "00", year, holder, cvv);
     }
@@ -94,7 +99,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(6);
+        String year = getFutureYear(6);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -103,7 +108,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getPastYear(1);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -120,7 +125,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(1);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -129,7 +134,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(2);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -138,7 +143,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -147,7 +152,7 @@ public class DataHelper {
         Faker faker = new Faker(new Locale("ru"));
         String holder = faker.name().firstName() + " " + faker.name().lastName();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
@@ -156,8 +161,9 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " " + faker.number().digit();
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
+
         return new Card("4444444444444441", month, year, holder, cvv);
     }
 
@@ -165,7 +171,7 @@ public class DataHelper {
         Faker faker = new Faker();
         String holder = faker.name().firstName() + " %$ * &";
         String month = getShiftedMonth();
-        String year = getShiftedYear(1);
+        String year = getFutureYear(1);
         String cvv = faker.number().digits(3);
         return new Card("4444444444444441", month, year, holder, cvv);
     }
