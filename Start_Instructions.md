@@ -9,17 +9,17 @@
 ---------------------
 ## Инструкция по запуску
 
-#### 1. Склонировать репозиторий  
+### 1. Склонировать репозиторий  
   <code>git clone https://github.com/SobolB/Diplom_T_PO.git</code>
 
-#### 2.  Перейти в папку <ins>Diplom_T_PO</ins>  
+### 2.  Перейти в папку <ins>Diplom_T_PO</ins>  
 
-#### 3. Для работы с базой данных включаем приложение Wampser64:
+### 3. Для работы с базой данных включаем приложение Wampser64:
    
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/4384ada9-5eeb-4944-a031-0b43770ae35f)
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/7f758a11-b480-462f-91c6-f210732702d9)
 
-#### 3.1 Если необходимо, запустить контейнеры docker:
+### 3.1 Если необходимо, запустить контейнеры docker:
 
   Для работы с базой данных mysql выполнить команду:  
   
@@ -37,7 +37,7 @@
     
   <code>docker-compose -f docker-compose-postgres.yml down</code>
 
-#### 3.2 Запустить приложение:  
+### 3.2 Запустить приложение:  
 
   Для запуска приложения с базой данных mysql выполнить команду:  
     
@@ -47,7 +47,7 @@
     
   <code>java -Dspring.datasource.url=jdbc:postgresql://192.168.99.100:5432/app -jar aqa-shop.jar</code>
 
-#### 3.3 Запустить тесты:  
+### 3.3 Запустить тесты:  
 
    Для запуска тестов с базой данных mysql выполнить команду:  
    <code>gradlew test -Ddb.url=jdbc:mysql://192.168.99.100:3306/app</code>
@@ -55,14 +55,14 @@
    Для запуска тестов с базой данных postgres выполнить команду:  
    <code>gradlew test -Ddb.url=jdbc:postgresql://192.168.99.100:5432/app</code>
   
-#### 4. В файле [application.properties](https://github.com/SobolB/Diplom_T_PO/blob/master/application.properties), меняем данные на свои:
+### 4. В файле [application.properties](https://github.com/SobolB/Diplom_T_PO/blob/master/application.properties), меняем данные на свои:
   * Изменяем ссылку <ins>spring.datasource.url</ins> (url) на свою
   * Изменяем поле <ins>spring.datasource.username</ins> (username) на свое
   * Изменяем поле <ins>spring.datasource.password</ins> (password) на свое
 
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/25104042-1edc-412c-94e0-82902427a574)
 
-#### 5. Запускаем тесты:
+### 5. Запускаем тесты:
      
   Открываем Terminal Local (1):
    
@@ -74,7 +74,7 @@
     
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/7ddd0e2d-47b4-4943-9d05-d413b6659bc0)
 
-#### 6. Открываем Terminal Local (2):
+### 6. Открываем Terminal Local (2):
   
   Вводим команды:
     
@@ -84,14 +84,14 @@
     
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/dff8986a-8593-4851-9208-f673ef430558)
     
-#### 7.  Запуск тестов:
+### 7.  Запуск тестов:
   
   Выделяем два теста, нажимаем правой кнопкой мыши на любой из тестов и запускаем.
 
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/3fae4424-a230-4d34-89a0-f1b75d9a6102)
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/9d30a965-45e0-48b8-b713-9eadb0bb0aa2)
 
-#### 8. Сформируем отчет allure:
+### 8. Сформируем отчет allure:
  
   Открываем Terminal Local (3):
     
@@ -102,7 +102,7 @@
     
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/18264642-6abb-455c-a002-689b0fa89aff)
    
-#### 9. Открываем отчет в браузере:
+### 9. Открываем отчет в браузере:
  
   Открываем файл <ins>allure-report</ins>, находим файл <ins>index.html</ins> и открываем с помощью браузера.
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/7993c5d5-f26f-4772-8f39-b83e01ab4bb0)
