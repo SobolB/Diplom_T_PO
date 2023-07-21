@@ -19,7 +19,7 @@
 * [Ввод в поле "Владелец" только имя](https://github.com/SobolB/Diplom_T_PO/issues/4#issue-1799692392)
 * [Ввод в поле "Месяц" - значение "00"](https://github.com/SobolB/Diplom_T_PO/issues/5#issue-1799710955)
 #### Allure отчет
-* [Allure.png](docs/image.png)
+* [Allure.png]([docs/image.png](https://github.com/SobolB/Diplom_T_PO/blob/master/docs/image.png))
 #### Рекомендации
 * Необходимо исправить все найденные баги
 * Сделать обязательную валидацию необходимых полей
