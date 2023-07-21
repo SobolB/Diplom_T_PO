@@ -19,7 +19,7 @@
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/4384ada9-5eeb-4944-a031-0b43770ae35f)
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/7f758a11-b480-462f-91c6-f210732702d9)
 
-#### 4. В файле <ins> [application.properties](https://github.com/SobolB/Diplom_T_PO/blob/master/application.properties) </ins>, меняем данные на свои:
+#### 4. В файле [application.properties](https://github.com/SobolB/Diplom_T_PO/blob/master/application.properties), меняем данные на свои:
   * Изменяем ссылку <ins>spring.datasource.url</ins> (url) на свою
   * Изменяем поле <ins>spring.datasource.username</ins> (username) на свое
   * Изменяем поле <ins>spring.datasource.password</ins> (password) на свое
