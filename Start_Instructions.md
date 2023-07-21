@@ -47,7 +47,7 @@
     
   <code>java -Dspring.datasource.url=jdbc:postgresql://192.168.99.100:5432/app -jar aqa-shop.jar</code>
 
-4. Запустить тесты:  
+#### 3.3 Запустить тесты:  
 
    Для запуска тестов с базой данных mysql выполнить команду:  
    <code>gradlew test -Ddb.url=jdbc:mysql://192.168.99.100:3306/app</code>
