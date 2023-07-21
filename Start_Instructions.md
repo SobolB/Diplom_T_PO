@@ -61,7 +61,7 @@
    
 #### 8. Открываем отчет в браузере:
  
-  Открываем файл allure-report, находим файл index.html и открываем с помощью браузера.
+  Открываем файл <ins>allure-report</ins>, находим файл <ins>index.html</ins> и открываем с помощью браузера.
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/7993c5d5-f26f-4772-8f39-b83e01ab4bb0)
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/35f2d2ff-1c33-46cf-a6e1-1a9ade8edce1)
 
