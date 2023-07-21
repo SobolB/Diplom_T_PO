@@ -40,22 +40,32 @@ public class SqlHelper {
         Long count = null;
         val codesSQL = " SELECT COUNT(*) FROM order_entity;";
         val runner = new QueryRunner();
-        try (val conn = DriverManager.getConnection(url, user, password)) {
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            val conn = DriverManager.getConnection(url, user, password);
+
             count = runner.query(conn, codesSQL, new ScalarHandler<>());
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
         return Long.toString(count);
     }
 
     private static String getData(String query) {
         String data = "";
         val runner = new QueryRunner();
-        try (val conn = DriverManager.getConnection(url, user, password)) {
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            val conn = DriverManager.getConnection(url, user, password);
+
             data = runner.query(conn, query, new ScalarHandler<>());
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
         return data;
     }
 }
