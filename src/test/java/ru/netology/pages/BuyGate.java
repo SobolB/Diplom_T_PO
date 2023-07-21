@@ -1,68 +1,71 @@
-package ru.netology.pages;
+package ru.netology.data;
 
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
-import ru.netology.data.Card;
+import lombok.val;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
-public class BuyGate {
-    private SelenideElement heading = $$("h3").find(exactText("Оплата по карте"));
-    private SelenideElement cardNumberField = $(byText("Номер карты")).parent().$("[class=\"input__control\"]");
-    private SelenideElement monthField = $(byText("Месяц")).parent().$("[class=\"input__control\"]");
-    private SelenideElement yearField = $(byText("Год")).parent().$("[class=\"input__control\"]");
-    private SelenideElement cardHolderField = $(byText("Владелец")).parent().$("[class=\"input__control\"]");
-    private SelenideElement cvvField = $(byText("CVC/CVV")).parent().$("[class=\"input__control\"]");
-    private SelenideElement approvedOperation = $(byText("Операция одобрена Банком.")).parent().$("[class=\"notification__content\"]");
-    private SelenideElement failureOperation = $(byText("Ошибка! Банк отказал в проведении операции.")).parent().$("[class=\"notification__content\"]");
-    private SelenideElement wrongFormatError = $(byText("Неверный формат"));
-    private ElementsCollection wrongFormat4Error = $$(byText("Неверный формат"));
-    private SelenideElement cardExpirationDateError = $(byText("Неверно указан срок действия карты"));
-    private SelenideElement cardExpiredError = $(byText("Истёк срок действия карты"));
-    private SelenideElement requiredFieldError = $(byText("Поле обязательно для заполнения"));
+public class SqlHelper {
+    private static String url = System.getProperty("db.url");
+    private static String user = System.getProperty("db.user");
+    private static String password = System.getProperty("db.password");
 
-    private SelenideElement cancelField = $$("[class=\"icon-button__text\"]").first();
-    private SelenideElement continueButton = $$("button").find(exactText("Продолжить"));
-
-    public BuyGate() {
-        heading.shouldBe(visible);
+    public static void clearDB() {
+        val cleanCreditRequest = "DELETE FROM credit_request_entity;";
+        val cleanOrder = "DELETE FROM order_entity;";
+        val cleanPayment = "DELETE FROM payment_entity;";
+        val runner = new QueryRunner();
+        try (val conn = DriverManager.getConnection(url, user, password)) {
+            runner.update(conn, cleanCreditRequest);
+            runner.update(conn, cleanOrder);
+            runner.update(conn, cleanPayment);
+        } catch (Exception e) {
+            System.out.println("SQL exception in clearDB");
+        }
     }
 
-    public void inputData(Card card) {
-        cardNumberField.setValue(card.getCardNumber());
-        monthField.setValue(card.getMonth());
-        yearField.setValue(card.getYear());
-        cardHolderField.setValue(card.getCardHolder());
-        cvvField.setValue(card.getCvv());
-        continueButton.click();
+    public static String getPaymentStatus() {
+        val codesSQL = "SELECT status FROM payment_entity;";
+        return getData(codesSQL);
     }
 
-    public void waitNotificationApproved() {
-        approvedOperation.waitUntil(visible, 15000);
-        cancelField.click();
+    public static String getCreditRequestStatus() {
+        val codesSQL = "SELECT status FROM credit_request_entity;";
+        return getData(codesSQL);
     }
 
-    public void waitNotificationFailure() {
-        failureOperation.waitUntil(visible, 15000);
+    public static String getOrderCount() {
+        Long count = null;
+        val codesSQL = " SELECT COUNT(*) FROM order_entity;";
+        val runner = new QueryRunner();
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            val conn = DriverManager.getConnection(url, user, password);
+
+            count = runner.query(conn, codesSQL, new ScalarHandler<>());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return Long.toString(count);
     }
 
-    public void waitNotificationWrongFormat() {
-        wrongFormatError.waitUntil(visible, 15000);
-    }
+    private static String getData(String query) {
+        String data = "";
+        val runner = new QueryRunner();
 
-    public void waitNotificationExpirationDateError() {
-        cardExpirationDateError.waitUntil(visible, 15000);
-    }
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            val conn = DriverManager.getConnection(url, user, password);
 
-    public void waitNotificationExpiredError() {
-        cardExpiredError.waitUntil(visible, 15000);
-    }
+            data = runner.query(conn, query, new ScalarHandler<>());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-    public void waitNotificationWrongFormat4Fields() {
-        wrongFormat4Error.shouldHaveSize(4);
-        requiredFieldError.waitUntil(visible, 15000);
+        return data;
     }
 }
