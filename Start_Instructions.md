@@ -19,6 +19,42 @@
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/4384ada9-5eeb-4944-a031-0b43770ae35f)
   ![image](https://github.com/SobolB/Diplom_T_PO/assets/79850869/7f758a11-b480-462f-91c6-f210732702d9)
 
+#### 3.1 Если необходимо, запустить контейнеры docker:
+
+  Для работы с базой данных mysql выполнить команду:  
+  
+  <code>docker-compose -f docker-compose-mysql.yml up -d</code>
+  
+  После прогона тестов остановить контейнеры:  
+    
+  <code>docker-compose -f docker-compose-mysql.yml down</code>
+
+  Для работы с базой данных postgres выполнить команду:  
+  
+  <code>docker-compose -f docker-compose-postgres.yml up -d</code>
+  
+  После прогона тестов остановить контейнеры:  
+    
+  <code>docker-compose -f docker-compose-postgres.yml down</code>
+
+#### 3.2 Запустить приложение:  
+
+  Для запуска приложения с базой данных mysql выполнить команду:  
+    
+  <code>java -Dspring.datasource.url=jdbc:mysql://192.168.99.100:3306/app -jar aqa-shop.jar</code>
+
+  Для запуска приложения с базой данных postgres выполнить команду:  
+    
+  <code>java -Dspring.datasource.url=jdbc:postgresql://192.168.99.100:5432/app -jar aqa-shop.jar</code>
+
+4. Запустить тесты:  
+
+   Для запуска тестов с базой данных mysql выполнить команду:  
+   <code>gradlew test -Ddb.url=jdbc:mysql://192.168.99.100:3306/app</code>
+
+   Для запуска тестов с базой данных postgres выполнить команду:  
+   <code>gradlew test -Ddb.url=jdbc:postgresql://192.168.99.100:5432/app</code>
+  
 #### 4. В файле [application.properties](https://github.com/SobolB/Diplom_T_PO/blob/master/application.properties), меняем данные на свои:
   * Изменяем ссылку <ins>spring.datasource.url</ins> (url) на свою
   * Изменяем поле <ins>spring.datasource.username</ins> (username) на свое
